@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{32216EA3-3F9D-427D-B2F2-73A523BCA479}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lemon</RootNamespace>
+    <AssemblyName>Lemon</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DisposableBase.cs" />
+    <Compile Include="Extensions\EnumExtension.cs" />
+    <Compile Include="Extensions\ObjectExtension.cs" />
+    <Compile Include="Extensions\StringExtension.cs" />
+    <Compile Include="Extensions\XmlNodeExtension.cs" />
+    <Compile Include="InvokeRoute\ActionAttribute.cs" />
+    <Compile Include="InvokeRoute\ActionDescription.cs" />
+    <Compile Include="InvokeRoute\ActionExecutor.cs" />
+    <Compile Include="InvokeRoute\ActionResult.cs" />
+    <Compile Include="InvokeRoute\BaseDescription.cs" />
+    <Compile Include="InvokeRoute\ControllerDescription.cs" />
+    <Compile Include="InvokeRoute\DataMember.cs" />
+    <Compile Include="InvokeRoute\IActionResult.cs" />
+    <Compile Include="InvokeRoute\IDataProvider.cs" />
+    <Compile Include="InvokeRoute\IMyController.cs" />
+    <Compile Include="InvokeRoute\InvokeInfo.cs" />
+    <Compile Include="InvokeRoute\InvokeRouteHelper.cs" />
+    <Compile Include="InvokeRoute\ModelDescripton.cs" />
+    <Compile Include="InvokeRoute\ModelHelper.cs" />
+    <Compile Include="InvokeRoute\NotificationCenter.cs" />
+    <Compile Include="InvokeRoute\ReflectionExtensions2.cs" />
+    <Compile Include="InvokeRoute\ReflectionHelper.cs" />
+    <Compile Include="InvokeRoute\TrafficContext.cs" />
+    <Compile Include="InvokeRoute\TrafficRequest.cs" />
+    <Compile Include="InvokeRoute\TrafficResponse.cs" />
+    <Compile Include="InvokeRoute\VoidType.cs" />
+    <Compile Include="ISerializeTool.cs" />
+    <Compile Include="Multilanguage\Language.cs" />
+    <Compile Include="Multilanguage\LanguageArea.cs" />
+    <Compile Include="Multilanguage\LanguageCache.cs" />
+    <Compile Include="Multilanguage\LanguageHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RBAC\AccountEntity.cs" />
+    <Compile Include="RBAC\ActionEntity.cs" />
+    <Compile Include="RBAC\ActionParameter.cs" />
+    <Compile Include="RBAC\Function.cs" />
+    <Compile Include="RBAC\FunctionGroup.cs" />
+    <Compile Include="RBAC\IRole.cs" />
+    <Compile Include="RBAC\Menu.cs" />
+    <Compile Include="RBAC\PrivilegeManager.cs" />
+    <Compile Include="RBAC\RBACConfig.cs" />
+    <Compile Include="RBAC\RBACContext.cs" />
+    <Compile Include="RBAC\RBACManager.cs" />
+    <Compile Include="RBAC\RoleFactory.cs" />
+    <Compile Include="RBAC\RoleProviders\XMLRole.cs" />
+    <Compile Include="Security\BASE64Decoder.cs" />
+    <Compile Include="Security\BASE64Encoder.cs" />
+    <Compile Include="Security\CryptoHelper.cs" />
+    <Compile Include="Security\DESAlgorithmNew.cs" />
+    <Compile Include="Security\DesCopy.cs" />
+    <Compile Include="SingletonBase.cs" />
+    <Compile Include="SqlConverter.cs" />
+    <Compile Include="TaskScheduler\Plan.cs" />
+    <Compile Include="TaskScheduler\SchedulerManager.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
